@@ -7,3 +7,12 @@ C:\Users\ddori\documents\visual studio 2017\Projects\subject3\subject3\obj\Debug
 C:\Users\ddori\documents\visual studio 2017\Projects\subject3\subject3\obj\Debug\subject3.csproj.GenerateResource.Cache
 C:\Users\ddori\documents\visual studio 2017\Projects\subject3\subject3\obj\Debug\subject3.exe
 C:\Users\ddori\documents\visual studio 2017\Projects\subject3\subject3\obj\Debug\subject3.pdb
+C:\Users\ddori\Documents\Visual Studio 2017\Projects\Super-N-gon-master\subject3\subject3\bin\Debug\subject3.exe.config
+C:\Users\ddori\Documents\Visual Studio 2017\Projects\Super-N-gon-master\subject3\subject3\bin\Debug\subject3.exe
+C:\Users\ddori\Documents\Visual Studio 2017\Projects\Super-N-gon-master\subject3\subject3\bin\Debug\subject3.pdb
+C:\Users\ddori\Documents\Visual Studio 2017\Projects\Super-N-gon-master\subject3\subject3\obj\Debug\subject3.csprojResolveAssemblyReference.cache
+C:\Users\ddori\Documents\Visual Studio 2017\Projects\Super-N-gon-master\subject3\subject3\obj\Debug\subject3.Form1.resources
+C:\Users\ddori\Documents\Visual Studio 2017\Projects\Super-N-gon-master\subject3\subject3\obj\Debug\subject3.Properties.Resources.resources
+C:\Users\ddori\Documents\Visual Studio 2017\Projects\Super-N-gon-master\subject3\subject3\obj\Debug\subject3.csproj.GenerateResource.Cache
+C:\Users\ddori\Documents\Visual Studio 2017\Projects\Super-N-gon-master\subject3\subject3\obj\Debug\subject3.exe
+C:\Users\ddori\Documents\Visual Studio 2017\Projects\Super-N-gon-master\subject3\subject3\obj\Debug\subject3.pdb

@@ -28,7 +28,7 @@ namespace subject3
             int width = ClientSize.Width;
 
             //g.FillPolygon(new SolidBrush(Color.FromArgb(188, 255, 100)), nPoints2);
-            DrawPolygon(g, pen, this.ClientSize.Width / 2, this.Height / 2, 100, 0, 360/n);
+            DrawPolygon(g, pen, this.ClientSize.Width / 2, this.Height / 2, 100, 60, 360/n);
         }
 
         private void Form1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -72,7 +72,7 @@ namespace subject3
                 pointList.Add(GetCirclePoint(originX, originY, radius, i));
             }
 
-            graphics.FillPolygon(new SolidBrush(Color.FromArgb(188, 255, 100)),  pointList.ToArray());
+            graphics.FillPolygon(new SolidBrush(Color.FromArgb(0, 150, 136)),  pointList.ToArray());
         }
 
         public Point GetCirclePoint(int originX, int originY, double radius, double degree)
