@@ -25,3 +25,12 @@ C:\Users\ddori\Source\Repos\Super-N-gon\subject3\subject3\obj\Debug\subject3.Pro
 C:\Users\ddori\Source\Repos\Super-N-gon\subject3\subject3\obj\Debug\subject3.csproj.GenerateResource.Cache
 C:\Users\ddori\Source\Repos\Super-N-gon\subject3\subject3\obj\Debug\subject3.exe
 C:\Users\ddori\Source\Repos\Super-N-gon\subject3\subject3\obj\Debug\subject3.pdb
+C:\Users\ddori\Documents\Super-N-gon\subject3\subject3\bin\Debug\subject3.exe.config
+C:\Users\ddori\Documents\Super-N-gon\subject3\subject3\bin\Debug\subject3.exe
+C:\Users\ddori\Documents\Super-N-gon\subject3\subject3\bin\Debug\subject3.pdb
+C:\Users\ddori\Documents\Super-N-gon\subject3\subject3\obj\Debug\subject3.csprojResolveAssemblyReference.cache
+C:\Users\ddori\Documents\Super-N-gon\subject3\subject3\obj\Debug\subject3.Form1.resources
+C:\Users\ddori\Documents\Super-N-gon\subject3\subject3\obj\Debug\subject3.Properties.Resources.resources
+C:\Users\ddori\Documents\Super-N-gon\subject3\subject3\obj\Debug\subject3.csproj.GenerateResource.Cache
+C:\Users\ddori\Documents\Super-N-gon\subject3\subject3\obj\Debug\subject3.exe
+C:\Users\ddori\Documents\Super-N-gon\subject3\subject3\obj\Debug\subject3.pdb

@@ -14,6 +14,10 @@ namespace subject3
     public partial class Form1 : Form
     {
         int n = 3;
+        int circleSize = 1000;
+        int even = 0;
+        float degreeSum = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -21,19 +25,72 @@ namespace subject3
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+            decimal decTotalSales, decBookSales, decPeriodicalSales, decRedPie;
+
             if (n <= 3)
                 n = 3;
             Graphics g = e.Graphics;
             Pen pen = new Pen(Color.Red);
             int height = ClientSize.Height;
             int width = ClientSize.Width;
+            try
+            {
+                decBookSales = (decimal)1 / n;
+                try
+                {
+                    decPeriodicalSales = (decimal)1 / n;
+                    try
+                    {
+                        decRedPie = (decimal)1 / n;
+                        decTotalSales = decBookSales + decPeriodicalSales;
 
-            
-            DrawPolygon(g, pen, this.ClientSize.Width / 2, this.Height / 2, 200, 60, 360/n);
-            DrawPlygon(g, pen, this.ClientSize.Width / 2, this.Height / 2, 100, 60, 360/n);
+                        SolidBrush bookBrush = new SolidBrush(Color.Blue);
+                        SolidBrush periodicalBrush = new SolidBrush(Color.Yellow);
+                        SolidBrush redPie = new SolidBrush(Color.Red);
+                        float intEndBook = (float)((decBookSales / decTotalSales * 360) / n);
+                        float intEndPeriodical = (float)((decPeriodicalSales / decTotalSales * 360) / n);
+                        float intEndRedPie = (float)((decRedPie / decTotalSales * 360) / n);
+                        for (int i = 0; i < n ; i++)
+                        {
+                            if (decTotalSales != 0)
+                            {
+                                if (even % 3 == 0)
+                                {
+                                    g.FillPie(bookBrush, (this.ClientSize.Width / 2) - (circleSize / 2), (this.ClientSize.Height / 2) - (circleSize / 2), circleSize, circleSize, degreeSum, intEndBook * 2);
+                                    degreeSum += intEndBook * 2;
+                                    even++;
+                                }
+                                else if(even % 3 == 1)
+                                {
+                                    g.FillPie(periodicalBrush, (this.ClientSize.Width / 2) - (circleSize / 2), (this.ClientSize.Height / 2) - (circleSize / 2), circleSize, circleSize, degreeSum, intEndPeriodical * 2);
+                                    degreeSum += intEndPeriodical * 2;
+                                    even++;
+                                }
+                                else if (even % 3 == 2)
+                                {
+                                    g.FillPie(redPie, (this.ClientSize.Width / 2) - (circleSize / 2), (this.ClientSize.Height / 2) - (circleSize / 2), circleSize, circleSize, degreeSum, intEndRedPie * 2);
+                                    degreeSum += intEndRedPie * 2;
+                                    even++;
+                                }
+                            }
+                        }
+                    }
+                    catch
+                    {
+
+                    }
+                }
+                catch
+                {
+
+                }
+            }
+            catch
+            {
+
+            }
+            DrawPolygon(g, pen, this.ClientSize.Width / 2, this.ClientSize.Height / 2, 50, 0, 360 / n);
         }
-
-
 
         private void Form1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
@@ -65,24 +122,6 @@ namespace subject3
                     break;
             }
         }
-        public void DrawPlygon(Graphics graphics, Pen pen, int originX, int originY, double radius, double startDegree, double intervalDegree)
-        {
-            int polygonCount = Convert.ToInt32(360d / intervalDegree);
-
-            List<Point> pointList = new List<Point>();
-
-            for (double i = startDegree; i < startDegree + intervalDegree * polygonCount; i += intervalDegree)
-            {
-                pointList.Add(GetCirclePoint(originX, originY, radius, i));
-            }
-            
-            graphics.FillPolygon(new SolidBrush(Color.FromArgb(0, 200, 136)),  pointList.ToArray());
-            for(int i = 0; i < n; i++)
-            {
-                MessageBox.Show(pointList[i].ToString());
-            }
-        }
-
 
         public void DrawPolygon(Graphics graphics, Pen pen, int originX, int originY, double radius, double startDegree, double intervalDegree)
         {
