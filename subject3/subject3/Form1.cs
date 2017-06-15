@@ -21,11 +21,16 @@ namespace subject3
         float degreeSum = 0;
         int time = 0;
         int rotateDirect = 0;
+        int randZoomin = 0;
+        int checkZoomin = 0;
+        int zoomInOut = 0;
+        double circleRadius = 0.0f;
 
-        Timer scoreTimer, randRotateTimer, playerRotateTimer;
+        Timer scoreTimer, randRotateTimer, playerRotateTimer, zoomInOutTimer;
         List<Point> pointList;
         Graphics g;
         Random rand = new Random();
+        Random zoomRand = new Random();
         Pen bigPolygonPen, trianglePen, whitepen;
         PointF[] point;
         PointF center;
@@ -92,7 +97,7 @@ namespace subject3
                     }
                 }
 
-            DrawPolygon(g, bigPolygonPen, this.ClientSize.Width / 2, this.ClientSize.Height / 2, 40, randDegree, 360 / n);
+            DrawPolygon(g, bigPolygonPen, this.ClientSize.Width / 2, this.ClientSize.Height / 2, 40+circleRadius, randDegree, 360 / n);
             //DrawPolygonLine(g, bigPolygonPen, this.ClientSize.Width / 2, this.ClientSize.Height / 2, 100, randDegree, 360 / n);
             DrawTriangle(g, trianglePen);
         }
@@ -146,6 +151,7 @@ namespace subject3
                     scoreTimer.Stop();
                     randRotateTimer.Stop();
                     playerRotateTimer.Stop();
+                    zoomInOutTimer.Stop();
                     time = 0;
                     label6.Text = time.ToString();
                     break;
@@ -228,6 +234,31 @@ namespace subject3
             playerRotateTimer.Interval = 40;
             playerRotateTimer.Tick += new EventHandler(PlayerRotate);
             playerRotateTimer.Start();
+
+            zoomInOutTimer = new Timer();
+            zoomInOutTimer.Interval = 100;
+            zoomInOutTimer.Tick += new EventHandler(Zoom);
+            zoomInOutTimer.Start();
+        }
+
+        private void Zoom(object sender, EventArgs e)
+        {
+            zoomInOut = zoomRand.Next(50, 80);
+
+            if(checkZoomin == 0)
+            {
+                circleRadius += 5.0f;
+                Invalidate();
+                if (circleRadius >= zoomInOut)
+                    checkZoomin++;
+            }
+            else
+            {
+                circleRadius -= 5.0f;
+                Invalidate();
+                if (circleRadius < 20)
+                    checkZoomin--;
+            }
         }
 
         private void PlayerRotate(object sender, EventArgs e)
